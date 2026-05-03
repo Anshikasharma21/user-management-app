@@ -26,13 +26,22 @@ function Register() {
     e.preventDefault();
     setMessage("");
 
+    // keep frontend validation (IMPORTANT)
     if (form.password !== form.confirmPassword) {
       setMessage("Passwords do not match");
       return;
     }
 
     try {
-      const res = await axios.post("https://user-management-app-072j.onrender.com/api/create", form);
+      const res = await axios.post(
+        "https://user-management-app-072j.onrender.com/api/create",
+        {
+          username: form.username,
+          email: form.email,
+          password: form.password,
+        }
+      );
+
       setMessage(res.data.message);
 
       setForm({
@@ -102,7 +111,6 @@ function Register() {
           <button type="submit">Sign Up</button>
         </form>
 
-        {/* Added margin-top via CSS class */}
         <p className="signup-text">
           Already have an account? <Link to="/login">Log In</Link>
         </p>
