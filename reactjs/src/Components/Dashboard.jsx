@@ -15,7 +15,7 @@ function Dashboard() {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/dashboard', {
+        const response = await axios.get(  'https://user-management-app-072j.onrender.com/api/dashboard', {
           headers: { Authorization: `Bearer ${token}` },
         });
 

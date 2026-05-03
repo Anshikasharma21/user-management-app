@@ -32,7 +32,7 @@ function Register() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/create", form);
+      const res = await axios.post("https://user-management-app-072j.onrender.com/api/create", form);
       setMessage(res.data.message);
 
       setForm({

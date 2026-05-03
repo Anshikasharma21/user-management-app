@@ -17,7 +17,7 @@ function Login() {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/login", form);
+      const res = await axios.post("https://user-management-app-072j.onrender.com/api/login", form);
 
       if (res.data && res.data.message) {
         setMessage(res.data.message);
