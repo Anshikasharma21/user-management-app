@@ -5,7 +5,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import jwt from 'jsonwebtoken'
 import User from './models/User.js'
-import Feedback from "./models/Feedback.js"
+
 
 dotenv.config()
 
